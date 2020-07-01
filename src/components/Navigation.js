@@ -24,9 +24,6 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: 36,
     },
-    hide: {
-        display: 'none',
-    },
     drawer: {
         width: drawerWidth,
         flexShrink: 0,

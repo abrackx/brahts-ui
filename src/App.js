@@ -23,13 +23,15 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
   grid: {
-
+    display: 'flex',
   },
   content: {
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'absolute',
-    width: '100%',
+  },
+  nav: {
+    width: '72px'
+  },
+  feedItem: {
+    display: 'flex'
   }
 }));
 
@@ -43,20 +45,19 @@ function App(props) {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-
         <Grid container className={classes.grid}>
-          <Grid item>
+          <div className="nav">
+            <Grid item className={classes.nav}>
             <Navigation handlePage={setPage} />
           </Grid>
-
+          </div>
+          
           <Grid item className={classes.content} >
             <Header />
             <Feed page={page} />
             <Divider />
           </Grid>
-
         </Grid>
-
       </ThemeProvider>
     </div>
   );
