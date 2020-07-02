@@ -23,7 +23,7 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
   content: {
-    width: '100%'
+    width: '99%'
   },
   root: {
     display: 'flex',
@@ -45,7 +45,6 @@ function App(props) {
         <main className={classes.content}>
           <Header />
           <Feed page={page} />
-          <Divider />
         </main>
       </ThemeProvider>
     </div>
