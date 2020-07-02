@@ -20,45 +20,44 @@ const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-    },
-    menuButton: {
+      },
+      menuButton: {
         marginRight: 36,
-    },
-    drawer: {
+      },
+      hide: {
+        display: 'none',
+      },
+      drawer: {
         width: drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
-    },
-    drawerOpen: {
+      },
+      drawerOpen: {
         width: drawerWidth,
         transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.enteringScreen,
         }),
-    },
-    drawerClose: {
+      },
+      drawerClose: {
         transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
         }),
         overflowX: 'hidden',
         width: theme.spacing(7) + 1,
         [theme.breakpoints.up('sm')]: {
-            width: theme.spacing(9),
+          width: theme.spacing(8)
         },
-    },
-    toolbar: {
+      },
+      toolbar: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
         padding: theme.spacing(0, 1),
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
-    },
-    content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-    },
+      },
 }));
 
 export default function Navigation({ handlePage }) {
@@ -71,7 +70,6 @@ export default function Navigation({ handlePage }) {
 
     return (
         <div className={classes.root}>
-
             <Drawer
                 variant="permanent"
                 className={clsx(classes.drawer, {
