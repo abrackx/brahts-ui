@@ -50,52 +50,49 @@ function Feed({ page }) {
             }
             case "about": {
                 return (
-                    <div>
+                    <div className={classes.content}>
                         <FeedItem
                             title="full stack developer"
-                            text="hell yeah brah I know java and js"
+                            text="capable in the front-end, at home in the back-end"
                             img={Spring}
                         />
                         <FeedItem
                             title="experienced system architect"
                             text="from data modelling to kafka implementations"
-                            img={Spring}
+                            img={Kafka}
                         />
-                        <Divider />
                     </div>
                 )
             }
             case "github": {
                 return (
-                    <div>
+                    <div className={classes.content}>
                         <FeedItem
                             title="full stack developer"
-                            text="hell yeah brah I know java and js"
-                            img={Spring}
+                            text="capable in the front-end, at home in the back-end"
+                            img={DatabaseIcon}
                         />
                         <FeedItem
-                            title="experienced system architect"
-                            text="from data modelling to kafka implementations"
+                            title="full stack developer"
+                            text="capable in the front-end, at home in the back-end"
                             img={Spring}
                         />
-                        <Divider />
                     </div>
                 )
             }
             case "contact": {
                 return (
-                    <div>
+                    <div className={classes.content}>
                         <FeedItem
                             title="full stack developer"
-                            text="hell yeah brah I know java and js"
-                            img={Spring}
+                            text="capable in the front-end, at home in the back-end"
+                            img={DatabaseIcon}
                         />
                         <FeedItem
                             title="experienced system architect"
                             text="from data modelling to kafka implementations"
-                            img={Spring}
+                            img={Kafka}
                         />
-                        <Divider />
                     </div>
                 )
             }
