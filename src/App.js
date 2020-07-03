@@ -41,6 +41,7 @@ function App(props) {
   const setPage = (newPage) => {
     handlePage(newPage)
   }
+  document.title='brahts.dev';
   const classes = useStyles();
   return (
     <div className={classes.root}>
