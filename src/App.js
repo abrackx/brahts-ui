@@ -23,7 +23,11 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
   content: {
-    width: '99%'
+    width: '99%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   root: {
     display: 'flex',

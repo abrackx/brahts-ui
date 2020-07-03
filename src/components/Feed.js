@@ -14,6 +14,7 @@ import Spring from '../imgs/spring.svg'
 
 const useStyles = makeStyles((theme) => ({
     content: {
+        width: '100%',
         flexGrow: 1,
         padding: theme.spacing(3),
     },
@@ -26,10 +27,10 @@ function Feed({ page }) {
         switch (page) {
             case "main": {
                 return (
-                    <div>
+                    <div className={classes.content}>
                         <FeedItem 
                             title="full stack developer" 
-                            text="hell yeah brah I know java and js"
+                            text="capable in the front-end, at home in the back-end"
                             img={DatabaseIcon}
                             />
                         <FeedItem 
@@ -97,7 +98,7 @@ function Feed({ page }) {
 
     return (
         <div >
-            <Box m={4}>
+            <Box m={4} className={classes.content}>
                 {togglePage(page)}
             </Box>
         </div>

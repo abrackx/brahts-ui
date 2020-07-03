@@ -8,28 +8,29 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
-        marginBottom: '3%',
-    },
-    media: {
+        height: '50%',
+        marginBottom: theme.spacing(2),
         display: 'flex',
-        height: '40%',
-        paddingTop: '56.25%', // 16:9,        
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'center'
     },
-});
+}));
 
 export default function FeedItem({ img, title, text }) {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
             <CardMedia
+                component="img"
                 className={classes.media}
                 image={img}
                 title={title}
             />
-            <CardContent>
+            <CardContent className={classes.content}>
                 <Typography gutterBottom component="h2">
                     {title}
                 </Typography>
