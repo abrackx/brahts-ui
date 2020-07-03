@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme) => ({
     content: {
         display: 'flex',
         width: '100%',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         flexWrap: 'wrap',
+        marginTop: theme.spacing(4),
     },
 }));
 
@@ -35,11 +36,15 @@ function Feed({ page }) {
                             img={DatabaseIcon}
                         />
                         <FeedItem
+                            title="full stack developer"
+                            text="capable in the front-end, at home in the back-end"
+                            img={Spring}
+                        />
+                        <FeedItem
                             title="experienced system architect"
                             text="from data modelling to kafka implementations"
                             img={Kafka}
                         />
-                        <Divider />
                     </div>
                 )
             }
