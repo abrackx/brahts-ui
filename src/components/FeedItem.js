@@ -13,9 +13,13 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(4),
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-around',
+        justifyContent: 'end',
         alignItems: 'center',
         flexWrap: 'wrap',
+    },
+    media: {
+        width: '40%',
+        height: 'auto',
     },
 }));
 
@@ -33,7 +37,7 @@ export default function FeedItem({ img, title, text }) {
                 <Typography gutterBottom component="h2">
                     {title}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
                     {text}
                 </Typography>
             </CardContent>
