@@ -10,13 +10,12 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
-        height: '50%',
-        marginBottom: theme.spacing(2),
+        margin: theme.spacing(4),
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
-        alignItems: 'center'
+        alignItems: 'center',
+        flexWrap: 'wrap',
     },
 }));
 

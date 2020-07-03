@@ -14,9 +14,10 @@ import Spring from '../imgs/spring.svg'
 
 const useStyles = makeStyles((theme) => ({
     content: {
+        display: 'flex',
         width: '100%',
-        flexGrow: 1,
-        padding: theme.spacing(3),
+        justifyContent: 'center',
+        flexWrap: 'wrap',
     },
 }));
 
@@ -28,13 +29,13 @@ function Feed({ page }) {
             case "main": {
                 return (
                     <div className={classes.content}>
-                        <FeedItem 
-                            title="full stack developer" 
+                        <FeedItem
+                            title="full stack developer"
                             text="capable in the front-end, at home in the back-end"
                             img={DatabaseIcon}
-                            />
-                        <FeedItem 
-                            title="experienced system architect" 
+                        />
+                        <FeedItem
+                            title="experienced system architect"
                             text="from data modelling to kafka implementations"
                             img={Kafka}
                         />
@@ -45,13 +46,13 @@ function Feed({ page }) {
             case "about": {
                 return (
                     <div>
-                        <FeedItem 
-                            title="full stack developer" 
+                        <FeedItem
+                            title="full stack developer"
                             text="hell yeah brah I know java and js"
                             img={Spring}
-                            />
-                        <FeedItem 
-                            title="experienced system architect" 
+                        />
+                        <FeedItem
+                            title="experienced system architect"
                             text="from data modelling to kafka implementations"
                             img={Spring}
                         />
@@ -62,13 +63,13 @@ function Feed({ page }) {
             case "github": {
                 return (
                     <div>
-                        <FeedItem 
-                            title="full stack developer" 
+                        <FeedItem
+                            title="full stack developer"
                             text="hell yeah brah I know java and js"
                             img={Spring}
-                            />
-                        <FeedItem 
-                            title="experienced system architect" 
+                        />
+                        <FeedItem
+                            title="experienced system architect"
                             text="from data modelling to kafka implementations"
                             img={Spring}
                         />
@@ -79,13 +80,13 @@ function Feed({ page }) {
             case "contact": {
                 return (
                     <div>
-                        <FeedItem 
-                            title="full stack developer" 
+                        <FeedItem
+                            title="full stack developer"
                             text="hell yeah brah I know java and js"
                             img={Spring}
-                            />
-                        <FeedItem 
-                            title="experienced system architect" 
+                        />
+                        <FeedItem
+                            title="experienced system architect"
                             text="from data modelling to kafka implementations"
                             img={Spring}
                         />
@@ -97,10 +98,8 @@ function Feed({ page }) {
     }
 
     return (
-        <div >
-            <Box m={4} className={classes.content}>
-                {togglePage(page)}
-            </Box>
+        <div className={classes.content}>
+            {togglePage(page)}
         </div>
     );
 }
