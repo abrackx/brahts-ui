@@ -12,15 +12,20 @@ const useStyles = makeStyles((theme) => ({
     root: {
         margin: theme.spacing(4),
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'end',
+        flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
         flexWrap: 'wrap',
+        width: '55vh',
+        height: '35vh',
     },
     media: {
-        width: '40%',
+        width: '30%',
         height: 'auto',
     },
+    text: {
+        justifyContent: 'flex-end',
+    }
 }));
 
 export default function FeedItem({ img, title, text }) {

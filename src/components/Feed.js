@@ -37,7 +37,7 @@ function Feed({ page }) {
                         />
                         <FeedItem
                             title="full stack developer"
-                            text="capable in the front-end, at home in the back-end"
+                            text="capable in the back-end"
                             img={Spring}
                         />
                         <FeedItem
