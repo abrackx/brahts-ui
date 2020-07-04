@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        flexWrap: 'wrap',
         width: '55vh',
         height: '35vh',
     },
@@ -25,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         justifyContent: 'flex-end',
+    },
+    content: {
+        width: '40%',
     }
 }));
 

@@ -99,7 +99,7 @@ export default function Navigation({ handlePage }) {
                         <ListItemIcon><FaceIcon /></ListItemIcon>
                         <ListItemText primary="about" />
                     </ListItem>
-                    <ListItem button key="2" onClick={() => handlePage("github")}>
+                    <ListItem button key="2" onClick={event =>  window.location.href='https://github.com/abrackx'}>
                         <ListItemIcon><GitHubIcon /></ListItemIcon>
                         <ListItemText primary="github" />
                     </ListItem>

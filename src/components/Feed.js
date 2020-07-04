@@ -11,6 +11,9 @@ import FeedItem from './FeedItem'
 import DatabaseIcon from '../imgs/db.svg'
 import Kafka from '../imgs/kafka.svg'
 import Spring from '../imgs/spring.svg'
+import University from '../imgs/usf.svg'
+import Java from '../imgs/java.svg'
+import Email from '../imgs/email.svg'
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -36,13 +39,13 @@ function Feed({ page }) {
                             img={DatabaseIcon}
                         />
                         <FeedItem
-                            title="full stack developer"
-                            text="capable in the back-end"
+                            title="enterprise ready"
+                            text="designing software built to last"
                             img={Spring}
                         />
                         <FeedItem
                             title="experienced system architect"
-                            text="from data modelling to kafka implementations"
+                            text="from data modeling to kafka implementations"
                             img={Kafka}
                         />
                     </div>
@@ -52,14 +55,14 @@ function Feed({ page }) {
                 return (
                     <div className={classes.content}>
                         <FeedItem
-                            title="full stack developer"
-                            text="capable in the front-end, at home in the back-end"
-                            img={Spring}
+                            title="academic foundations"
+                            text="completed b.a. in mathematics at the university of south florida"
+                            img={University}
                         />
                         <FeedItem
-                            title="experienced system architect"
-                            text="from data modelling to kafka implementations"
-                            img={Kafka}
+                            title="career experience"
+                            text="currently wearing many hats at Masonite International, programming in Java 8 using Spring"
+                            img={Java}
                         />
                     </div>
                 )
@@ -84,14 +87,9 @@ function Feed({ page }) {
                 return (
                     <div className={classes.content}>
                         <FeedItem
-                            title="full stack developer"
-                            text="capable in the front-end, at home in the back-end"
-                            img={DatabaseIcon}
-                        />
-                        <FeedItem
-                            title="experienced system architect"
-                            text="from data modelling to kafka implementations"
-                            img={Kafka}
+                            title="reach out"
+                            text="feel free to contact me with gigs, advice, song requests or whatever else you can think of at abrackx@gmail.com"
+                            img={Email}
                         />
                     </div>
                 )
