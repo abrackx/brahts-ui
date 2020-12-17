@@ -1,0 +1,10 @@
+.point {
+  stroke: black;
+  stroke-width: 1;
+}
+
+#footer-main {
+  height: 5%;
+  margin-bottom: 0;
+  font-size: small;
+}
