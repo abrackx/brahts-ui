@@ -30,7 +30,7 @@ export default function Content() {
         <h1>services</h1>
         <h3>static sites</h3>
         <p>
-          Althought I primarily deal with enterprise level systems I am
+          Although I primarily deal with enterprise level systems I am
           comfortable building and hosting custom static websites like this one!
           Reach out if you need something built.{" "}
         </p>

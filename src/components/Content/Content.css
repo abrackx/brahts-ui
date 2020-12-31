@@ -3,14 +3,11 @@
   flex-direction: column;
   width: 75%;
   height: 90vh;
-  overflow: hidden;
+  overflow: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none;
-  overscroll-behavior-y: none;
-}
-
-#content-main:hover {
-  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 #content-main::-webkit-scrollbar {
@@ -45,4 +42,5 @@
   height: 100%;
   width: auto;
   margin-bottom: 1vh;
+  object-fit: cover;
 }
