@@ -26,23 +26,6 @@ export default function Content() {
       </div>
       <br />
 
-      <div id="content-services">
-        <h1>services</h1>
-        <h3>static sites</h3>
-        <p>
-          Although I primarily deal with enterprise level systems I am
-          comfortable building and hosting custom static websites like this one!
-          Reach out if you need something built.{" "}
-        </p>
-        <h3>backend design</h3>
-        <p>
-          I am able to provide consulting or development services for backend
-          architecture like database management, query optimization and creating
-          RESTful api suites.
-        </p>
-      </div>
-      <br />
-
       <div id="content-skills">
         <h1>skills</h1>
         <p>

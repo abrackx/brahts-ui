@@ -11,9 +11,6 @@ export default function NavigationBar() {
           <a href="#content-about">about</a>
         </li>
         <li>
-          <a href="#content-services">services</a>
-        </li>
-        <li>
           <a href="#content-skills">skills</a>
         </li>
         <li>
