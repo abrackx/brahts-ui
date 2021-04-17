@@ -1,8 +1,8 @@
-#nav-main ul,
-li {
+#nav-main ul {
   display: flex;
   justify-content: space-between;
   padding: 0 0 0 0;
+  list-style: none;
 }
 
 #nav-main {

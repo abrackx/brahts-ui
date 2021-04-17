@@ -1,23 +1,25 @@
 #content-main {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  justify-content: space-around;
+  width: 45%;
   height: 90vh;
-  overflow: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
 }
 
-#content-main::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+#content-main ul{
+  max-height: 22%;
+  max-width: 85%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  align-content: space-between;
 }
 
-#content-main ul {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+#content-main li {
+  width: 30%;
 }
 
 #content-main h1 {
@@ -29,6 +31,10 @@
 #content-services,
 #content-contact {
   margin-bottom: 3vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
 }
 
 #content-main a:active {
@@ -36,10 +42,4 @@
 }
 #content-main a:visited {
   color: black;
-}
-
-#content-main img {
-  height: 90vh;
-  width: auto;
-  object-fit: cover;
 }

@@ -1,23 +1,17 @@
 import Footer from "../Footer";
 import "./Content.css";
-import main from "../../main.jpg"
 
 export default function Content() {
   return (
     <div id="content-main">
-      <img id="content-image" src={main} alt="stock electronics circuit" />
-
       <div id="content-about">
         <h1>about</h1>
         <p>Hey there. 👋</p>
         <p>
-          My name is Alex. I've been working in software development for a while
-          now.
+          My name is Alex. I've been working in software development for a
+          while.
         </p>
-        <p>
-          I am currently working on the digital team at Masonite International.
-          🚪
-        </p>
+        <p>I am currently on the digital team at Masonite International. 🚪</p>
         <p>
           <a href="https://github.com/abrackx">
             You can check out my github here.
@@ -37,14 +31,19 @@ export default function Content() {
           these frameworks or tools:
         </p>
         <ul>
-          <li>Spring Boot</li>
-          <li>JPA</li>
-          <li>Hibernate</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>Rust</li>
+          <li>Python</li>
+          <li>Spring</li>
           <li>Apache Kafka</li>
-          <li>Spring Batch</li>
+          <li>React</li>
+          <li>Actix-web</li>
+          <li>Hibernate</li>
+          <li>JPA</li>
           <li>MSSQL</li>
-          <li>MariaDB</li>
-          <li>MongoDB</li>
+          <li>PostgreSQL</li>
+          <li>Database Design</li>
           <li>GraphQL</li>
           <li>React</li>
           <li>Express</li>

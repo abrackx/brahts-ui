@@ -1,0 +1,11 @@
+#landing-main img {
+  height: 90vh;
+  width: auto;
+  object-fit: cover;
+}
+
+#landing-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
