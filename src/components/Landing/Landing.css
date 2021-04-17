@@ -1,6 +1,6 @@
 #landing-main img {
   height: 90vh;
-  width: auto;
+  width: 100%;
   object-fit: cover;
 }
 

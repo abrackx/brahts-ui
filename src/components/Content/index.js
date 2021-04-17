@@ -8,10 +8,9 @@ export default function Content() {
         <h1>about</h1>
         <p>Hey there. 👋</p>
         <p>
-          My name is Alex. I've been working in software development for a
-          while.
+          My name is Alex.
         </p>
-        <p>I am currently on the digital team at Masonite International. 🚪</p>
+        <p>I currently work on the digital team at Masonite International. 🚪</p>
         <p>
           <a href="https://github.com/abrackx">
             You can check out my github here.
