@@ -1,0 +1,13 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'alex brackx'
+theme = "hugo-book"
+
+[params]
+BookTheme = 'auto'
+BookToC = false
+# /static/logo.png then the path would be 'logo.png'
+BookLogo = 'move-over.png'
+# (Optional, default none) Set leaf bundle to render as side menu
+BookMenuBundle = '/menu'
+BookSearch = false
