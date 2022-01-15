@@ -5,9 +5,9 @@ draft: false
 ---
 
 {{< columns >}}
-## contact
+## reach out
 
-Feel free to reach out. I'm always willing to take a look at a problem query
+Feel free to send me a message. I'm always willing to take a look at a problem query
 or to tell you I too have never seen that happen before. 
 
 <--->
