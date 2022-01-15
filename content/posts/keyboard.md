@@ -5,7 +5,7 @@ date: 2022-01-14T22:21:37-05:00
 # bookSearchExclude: false
 ---
 
-# I created a macropad a while back. 
+# i created a macropad a while back. 
 
 I was pretty happy that it worked out first try.
 
