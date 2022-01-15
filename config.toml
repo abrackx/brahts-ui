@@ -4,7 +4,7 @@ title = 'alex brackx'
 theme = "hugo-book"
 
 [params]
-BookTheme = 'auto'
+BookTheme = 'light'
 BookToC = false
 # /static/logo.png then the path would be 'logo.png'
 BookLogo = 'move-over.png'

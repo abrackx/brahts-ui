@@ -7,9 +7,8 @@ draft: false
 {{< columns >}}
 ## contact
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+Feel free to reach out. I'm always willing to take a look at a problem query
+or to tell you I too have never seen that happen before. 
 
 <--->
 \
