@@ -1,0 +1,104 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="so i&rsquo;ve been trying to make a stomp client and server using rust #  It&rsquo;s been an experience to say the least.
+starting off #  First order of business is to find what already exists.
+ tokio-stomp stomp-rs  I&rsquo;m sure there are others but both of these have not been updated in a few years. Looks like it&rsquo;s time for a new stomp websocket handler built in rust.">
+<meta name=theme-color content="#FFFFFF">
+<meta name=color-scheme content="light dark"><meta property="og:title" content="Stomp">
+<meta property="og:description" content="so i&rsquo;ve been trying to make a stomp client and server using rust #  It&rsquo;s been an experience to say the least.
+starting off #  First order of business is to find what already exists.
+ tokio-stomp stomp-rs  I&rsquo;m sure there are others but both of these have not been updated in a few years. Looks like it&rsquo;s time for a new stomp websocket handler built in rust.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://example.org/posts/stomp/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-01-17T13:25:22-05:00">
+<meta property="article:modified_time" content="2022-01-17T13:25:22-05:00">
+<title>Stomp | alex brackx</title>
+<link rel=manifest href=/manifest.json>
+<link rel=icon href=/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/book.min.b9536d13922735c390acacd8c0c1483c164d4502a8553a93ddf0758e83dd509b.css integrity="sha256-uVNtE5InNcOQrKzYwMFIPBZNRQKoVTqT3fB1joPdUJs=" crossorigin=anonymous>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/><img src=/move-over.png alt=Logo><span>alex brackx</span>
+</a>
+</h2>
+<ul>
+<li><a href=/about/>about</a></li>
+<li><a href=/posts/>articles</a></li>
+<li><a href=/contact/>contact</a></li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>Stomp</strong>
+<label for=toc-control>
+</label>
+</div>
+</header>
+<article class=markdown>
+<h1>
+<a href=/posts/stomp/>Stomp</a>
+</h1>
+<h5>January 17, 2022</h5>
+<h1 id=so-ive-been-trying-to-make-a-stomp-client-and-server-using-rust>
+so i&rsquo;ve been trying to make a stomp client and server using rust
+<a class=anchor href=#so-ive-been-trying-to-make-a-stomp-client-and-server-using-rust>#</a>
+</h1>
+<p>It&rsquo;s been an experience to say the least.</p>
+<h2 id=starting-off>
+starting off
+<a class=anchor href=#starting-off>#</a>
+</h2>
+<p>First order of business is to find what already exists.</p>
+<ol>
+<li><a href=https://github.com/adwhit/tokio-stomp>tokio-stomp</a></li>
+<li><a href=https://github.com/zslayton/stomp-rs>stomp-rs</a></li>
+</ol>
+<p>I&rsquo;m sure there are others but both of these have not been updated in a few years. Looks like it&rsquo;s time for a new stomp websocket handler built in rust. <a href=https://xkcd.com/927/>Don&rsquo;t say it</a>.</p>
+<h2 id=moving-forward>
+moving forward
+<a class=anchor href=#moving-forward>#</a>
+</h2>
+<p>Lets look at <em>just</em> websockets. Maybe there&rsquo;s some well maintained crates out there. Remember we want both a client and a server in our crate to enable rapid development.</p>
+<ol>
+<li><a href=[https://link]%28https://github.com/websockets-rs/rust-websocket%29>rust-websocket</a></li>
+<li><a href=https://github.com/snapview/tungstenite-rs>tungstenite-rs</a></li>
+<li><a href=https://github.com/snapview/tokio-tungstenite>tokio-tungstenite</a></li>
+<li><a href=https://github.com/actix/examples/tree/master/websockets/websocket>actix</a></li>
+</ol>
+<p>Rust-websocket recommends that you do not use their crate and instead suggests tungstenite-rs or tokio-tungstenite. Actix-web apparently <em>can</em> handle websockets, <a href=https://actix.rs/docs/websockets/>however it does not seem straitforward</a>. Because I&rsquo;m lazy and want a single executable capable (but not necessarily good) at handling both the client and the server it made sense to utlize tokio-tungstenite. Tokio can let me do things like spawning a thread for both the client and the server.</p>
+<p>Let&rsquo;s try out some examples.</p>
+<h2 id=this-should-be-easy>
+this should be easy
+<a class=anchor href=#this-should-be-easy>#</a>
+</h2>
+<p>Tokio-tungstenite has an examples directory so it should be straightforward to get things going. Just kidding this is rust of course not. <a href=https://github.com/snapview/tokio-tungstenite/issues/141>This should save you some time</a>. Running the examples in your own project is not as simple as just a copy and paste in the rust world. With no cargo.toml provided you need to figure out your own.</p>
+<p>Introducing <a href=https://github.com/abrackx/wade>wade</a>. A soon-to-be-work-in-progress rust based STOMP websocket client and server. Currently all it does is actually make the client and server examples found in tokio-tungstenite runnable in a single executable.</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+</main>
+</body>
+</html>
