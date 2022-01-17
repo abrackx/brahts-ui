@@ -10,7 +10,7 @@ In 2017 I received a B.A. in Mathematics from [the University of South Florida](
 
 I do a lot of work on backend systems. My primary focus is working with distributed systems and designing software to facilitate their use.
 
-Open source software is a foundation of the modern internet. I promote it whenever possible. This website was made using [hugo](https://gohugo.io/) with the [hugo-book theme](https://github.com/alex-shpak/hugo-book).
+Open source software is the foundation of the modern internet. I promote it whenever possible. This website was made using [hugo](https://gohugo.io/) with the [hugo-book theme](https://github.com/alex-shpak/hugo-book).
 
 {{< columns >}}
 
