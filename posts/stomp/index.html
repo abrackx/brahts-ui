@@ -6,7 +6,7 @@
 starting off #  First order of business is to find what already exists.
  tokio-stomp stomp-rs  I&rsquo;m sure there are others but both of these have not been updated in a few years. Looks like it&rsquo;s time for a new stomp websocket handler built in rust.">
 <meta name=theme-color content="#FFFFFF">
-<meta name=color-scheme content="light dark"><meta property="og:title" content="Stomp">
+<meta name=color-scheme content="light dark"><meta property="og:title" content="stomp">
 <meta property="og:description" content="so i&rsquo;ve been trying to make a stomp client and server using rust #  It&rsquo;s been an experience to say the least.
 starting off #  First order of business is to find what already exists.
  tokio-stomp stomp-rs  I&rsquo;m sure there are others but both of these have not been updated in a few years. Looks like it&rsquo;s time for a new stomp websocket handler built in rust.">
@@ -14,7 +14,7 @@ starting off #  First order of business is to find what already exists.
 <meta property="og:url" content="http://example.org/posts/stomp/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-01-17T13:25:22-05:00">
 <meta property="article:modified_time" content="2022-01-17T13:25:22-05:00">
-<title>Stomp | alex brackx</title>
+<title>stomp | alex brackx</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.b9536d13922735c390acacd8c0c1483c164d4502a8553a93ddf0758e83dd509b.css integrity="sha256-uVNtE5InNcOQrKzYwMFIPBZNRQKoVTqT3fB1joPdUJs=" crossorigin=anonymous>
@@ -45,14 +45,14 @@ starting off #  First order of business is to find what already exists.
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>Stomp</strong>
+<strong>stomp</strong>
 <label for=toc-control>
 </label>
 </div>
 </header>
 <article class=markdown>
 <h1>
-<a href=/posts/stomp/>Stomp</a>
+<a href=/posts/stomp/>stomp</a>
 </h1>
 <h5>January 17, 2022</h5>
 <h1 id=so-ive-been-trying-to-make-a-stomp-client-and-server-using-rust>
@@ -74,14 +74,14 @@ starting off
 moving forward
 <a class=anchor href=#moving-forward>#</a>
 </h2>
-<p>Lets look at <em>just</em> websockets. Maybe there&rsquo;s some well maintained crates out there. Remember we want both a client and a server in our crate to enable rapid development.</p>
+<p>Lets look at <em>just</em> websockets. Maybe there are some well maintained crates out there. Remember we want both a client and a server in our crate to enable rapid development.</p>
 <ol>
 <li><a href=[https://link]%28https://github.com/websockets-rs/rust-websocket%29>rust-websocket</a></li>
 <li><a href=https://github.com/snapview/tungstenite-rs>tungstenite-rs</a></li>
 <li><a href=https://github.com/snapview/tokio-tungstenite>tokio-tungstenite</a></li>
 <li><a href=https://github.com/actix/examples/tree/master/websockets/websocket>actix</a></li>
 </ol>
-<p>Rust-websocket recommends that you do not use their crate and instead suggests tungstenite-rs or tokio-tungstenite. Actix-web apparently <em>can</em> handle websockets, <a href=https://actix.rs/docs/websockets/>however it does not seem straitforward</a>. Because I&rsquo;m lazy and want a single executable capable (but not necessarily good) at handling both the client and the server it made sense to utlize tokio-tungstenite. Tokio can let me do things like spawning a thread for both the client and the server.</p>
+<p>Rust-websocket recommends that you do not use their crate and instead suggests tungstenite-rs or tokio-tungstenite. Actix-web apparently <em>can</em> handle websockets, <a href=https://actix.rs/docs/websockets/>however it does not seem straightforward</a>. Because I&rsquo;m lazy and want a single executable capable (but not necessarily good) at handling both the client and the server it made sense to utilize tokio-tungstenite. Tokio can let me do things like spawning a thread for both the client and the server. And I&rsquo;d rather not coerce actix into handling websockets - that seems like a recipe for disaster.</p>
 <p>Let&rsquo;s try out some examples.</p>
 <h2 id=this-should-be-easy>
 this should be easy
@@ -89,6 +89,11 @@ this should be easy
 </h2>
 <p>Tokio-tungstenite has an examples directory so it should be straightforward to get things going. Just kidding this is rust of course not. <a href=https://github.com/snapview/tokio-tungstenite/issues/141>This should save you some time</a>. Running the examples in your own project is not as simple as just a copy and paste in the rust world. With no cargo.toml provided you need to figure out your own.</p>
 <p>Introducing <a href=https://github.com/abrackx/wade>wade</a>. A soon-to-be-work-in-progress rust based STOMP websocket client and server. Currently all it does is actually make the client and server examples found in tokio-tungstenite runnable in a single executable.</p>
+<h2 id=so-what-is-stomp>
+so what is stomp
+<a class=anchor href=#so-what-is-stomp>#</a>
+</h2>
+<p>Glad you asked, I&rsquo;m not really sure. <a href=https://stomp.github.io/stomp-specification-1.2.html>Here&rsquo;s the definition of the protocol</a>. This has a lot of text. Instead of trying to understand any of that why not get started right away.</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
