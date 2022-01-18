@@ -35,8 +35,8 @@ Let's try out some examples.
 
 Tokio-tungstenite has an examples directory so it should be straightforward to get things going. Just kidding this is rust of course not. [This should save you some time](https://github.com/snapview/tokio-tungstenite/issues/141). Running the examples in your own project is not as simple as just a copy and paste in the rust world. With no cargo.toml provided you need to figure out your own.
 
-Introducing [wade](https://github.com/abrackx/wade). A soon-to-be-work-in-progress rust based STOMP websocket client and server. Currently all it does is actually make the client and server examples found in tokio-tungstenite runnable in a single executable.
-
 ## so what is stomp
 
 Glad you asked, I'm not really sure. [Here's the definition of the protocol](https://stomp.github.io/stomp-specification-1.2.html). This has a lot of text. Instead of trying to understand any of that why not get started right away.
+
+Introducing [wade](https://github.com/abrackx/wade). A soon-to-be-work-in-progress rust based STOMP websocket client and server. Currently all it does is actually make the client and server examples found in tokio-tungstenite runnable in a single executable.
