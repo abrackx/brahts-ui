@@ -22,7 +22,7 @@ I'm sure there are others but both of these have not been updated in a few years
 
 Lets look at _just_ websockets. Maybe there are some well maintained crates out there. Remember we want both a client and a server in our crate to enable rapid development.
 
-1. [rust-websocket]([https://link](https://github.com/websockets-rs/rust-websocket))
+1. [rust-websocket](https://github.com/websockets-rs/rust-websocket)
 2. [tungstenite-rs](https://github.com/snapview/tungstenite-rs)
 3. [tokio-tungstenite](https://github.com/snapview/tokio-tungstenite)
 4. [actix](https://github.com/actix/examples/tree/master/websockets/websocket)
