@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import TerminalBox from '../components/TerminalBox.astro';
+---
+
+<BaseLayout title="Skills | Alex Brackx">
+  <Section id="skills" title="skills.sh" subtitle="What I work with">
+    <div class="skills-container">
+      <div class="skills-grid">
+        <TerminalBox title="Development">
+          <p class="category-description">Building robust, scalable applications from front to back</p>
+          <ul class="skill-list">
+            <li>Full-Stack Development</li>
+            <li>RESTful & GraphQL APIs</li>
+            <li>Microservices Architecture</li>
+            <li>Web Application Development</li>
+            <li>Server-Side Rendering</li>
+            <li>Progressive Web Apps</li>
+          </ul>
+        </TerminalBox>
+
+        <TerminalBox title="Databases">
+          <p class="category-description">Expert in data modeling, optimization, and management</p>
+          <ul class="skill-list">
+            <li>SQL Databases (PostgreSQL, MySQL)</li>
+            <li>NoSQL (MongoDB, Redis)</li>
+            <li>Database Design & Modeling</li>
+            <li>Query Optimization</li>
+            <li>Data Pipelines & ETL</li>
+            <li>Database Performance Tuning</li>
+          </ul>
+        </TerminalBox>
+
+        <TerminalBox title="DevOps & Tools">
+          <p class="category-description">Streamlining development and deployment workflows</p>
+          <ul class="skill-list">
+            <li>CI/CD Pipelines</li>
+            <li>Docker & Containerization</li>
+            <li>Cloud Platforms (AWS, Azure)</li>
+            <li>Infrastructure as Code</li>
+            <li>Monitoring & Logging</li>
+            <li>Automation & Scripting</li>
+          </ul>
+        </TerminalBox>
+
+        <TerminalBox title="Engineering Practices">
+          <p class="category-description">Maintaining code quality and team collaboration</p>
+          <ul class="skill-list">
+            <li>System Architecture & Design</li>
+            <li>Code Review & Mentoring</li>
+            <li>Test-Driven Development</li>
+            <li>Agile Methodologies</li>
+            <li>Technical Documentation</li>
+            <li>Performance Optimization</li>
+          </ul>
+        </TerminalBox>
+
+        <TerminalBox title="Languages & Frameworks">
+          <p class="category-description">Versatile across multiple tech stacks</p>
+          <ul class="skill-list">
+            <li>Java, SQL</li>
+            <li>JavaScript, TypeScript</li>
+            <li>Python, Go, Rust, Bash</li>
+            <li>Spring, Hibernate, JPA</li>
+            <li>React, Astro</li>
+            <li>Maven, Gradle, JUnit, Spock</li>
+          </ul>
+        </TerminalBox>
+
+        <TerminalBox title="Soft Skills">
+          <p class="category-description">Beyond the code</p>
+          <ul class="skill-list">
+            <li>Problem Solving</li>
+            <li>Technical Communication</li>
+            <li>Team Collaboration</li>
+            <li>Project Planning</li>
+            <li>Knowledge Sharing</li>
+            <li>Continuous Learning</li>
+          </ul>
+        </TerminalBox>
+      </div>
+
+      <div class="page-nav">
+        <a href="/" class="btn">← back to home</a>
+        <a href="/hobbies" class="btn">hobbies →</a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  .skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .category-description {
+    font-size: 0.9rem;
+    color: var(--color-accent-alt);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+  }
+
+  .skill-list {
+    list-style: none;
+  }
+
+  .skill-list li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    padding-left: var(--spacing-sm);
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .skill-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+
+    .page-nav {
+      flex-direction: column;
+    }
+  }
+</style>

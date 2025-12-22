@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import TerminalBox from '../components/TerminalBox.astro';
+
+// Import content from JSON
+import content from '../../content/site-content.json';
+---
+
+<BaseLayout title="Alex Brackx | Software Developer & Database Specialist">
+  <!-- Hero Section -->
+  <Hero
+    greeting={content.hero.greeting}
+    name={content.hero.name}
+    tagline={content.hero.tagline}
+  />
+
+  <!-- About Section -->
+  <Section id="about" title="about.sh" subtitle="A bit about me">
+    <div class="about-grid">
+      <div class="about-card">
+        <TerminalBox title={content.about.professional.title}>
+          <p>{content.about.professional.description}</p>
+          <ul class="highlight-list">
+            {content.about.professional.highlights.map((item: string) => (
+              <li class="terminal-prompt">{item}</li>
+            ))}
+          </ul>
+        </TerminalBox>
+      </div>
+
+      <div class="about-card">
+        <TerminalBox title={content.about.personal.title}>
+          <p>{content.about.personal.description}</p>
+          <div class="hobbies-list">
+            {content.about.personal.hobbies.map((hobby: { name: string; description: string }) => (
+              <div class="hobby-item">
+                <h4 class="accent">{hobby.name}</h4>
+                <p>{hobby.description}</p>
+              </div>
+            ))}
+          </div>
+        </TerminalBox>
+      </div>
+    </div>
+
+    <!-- Explore More Links -->
+    <div class="explore-more">
+      <h3 class="terminal-prompt">Explore More</h3>
+      <div class="explore-grid">
+        <a href="/skills" class="explore-card">
+          <TerminalBox>
+            <h4 class="accent">skills.sh</h4>
+            <p>Check out my technical expertise and what I work with</p>
+          </TerminalBox>
+        </a>
+        <a href="/hobbies" class="explore-card">
+          <TerminalBox>
+            <h4 class="accent">hobbies.sh</h4>
+            <p>Discover what I do outside of coding</p>
+          </TerminalBox>
+        </a>
+        <a href="/contact" class="explore-card">
+          <TerminalBox>
+            <h4 class="accent">contact.sh</h4>
+            <p>Get in touch and let's connect</p>
+          </TerminalBox>
+        </a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  /* About Section */
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about-card {
+    display: flex;
+    height: 100%;
+  }
+
+  .about-card > :global(.terminal-box) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .highlight-list {
+    list-style: none;
+    margin-top: var(--spacing-md);
+  }
+
+  .highlight-list li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-secondary);
+  }
+
+  .hobbies-list {
+    margin-top: var(--spacing-md);
+  }
+
+  .hobby-item {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hobby-item h4 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+  }
+
+  .hobby-item p {
+    color: var(--color-text-secondary);
+  }
+
+  /* Explore More Section */
+  .explore-more {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+  }
+
+  .explore-more h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .explore-card {
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+
+  .explore-card > :global(.terminal-box) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .explore-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .explore-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .explore-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-grid,
+    .explore-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+  }
+</style>
