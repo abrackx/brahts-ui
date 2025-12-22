@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "abrackx",
+    "tagline": "Software Developer | Database Specialist | Weekend Warrior"
+  },
+  "about": {
+    "professional": {
+      "title": "What I Do",
+      "description": "I'm a software developer with expertise in building efficient, scalable solutions and database management. I work with data pipelines, system architecture and love solving complex technical challenges.",
+      "highlights": [
+        "Software Development",
+        "Database Management",
+        "System Architecture",
+        "Data Pipeline Development"
+      ]
+    },
+    "personal": {
+      "title": "When I'm Not Coding",
+      "description": "Recess is in session. I dedicate a good amount of time to outdoor adventures that keep me balanced and energized.",
+      "hobbies": [
+        {
+          "name": "Rock Climbing",
+          "description": "Puzzles, but make them vertical"
+        },
+        {
+          "name": "Skiing",
+          "description": "The art of thoughtfully throwing yourself down a mountain"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Interested in connecting? Reach out!"
+  }
+}

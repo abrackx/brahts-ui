@@ -1,0 +1,104 @@
+---
+interface Props {
+  greeting: string;
+  name: string;
+  tagline: string;
+}
+
+const { greeting, name, tagline } = Astro.props;
+---
+
+<section class="hero section">
+  <div class="container">
+    <div class="hero-content">
+      <p class="greeting fade-in-up">{greeting}</p>
+      <h1 class="name fade-in-up">
+        {name}<span class="cursor"></span>
+      </h1>
+      <p class="tagline terminal-prompt fade-in-up">{tagline}</p>
+      <div class="hero-cta fade-in-up">
+        <a href="#about" class="btn">explore.sh</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(0, 255, 65, 0.15) 0%,
+      transparent 70%
+    );
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+  }
+
+  .hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .greeting {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xs);
+    animation-delay: 0.1s;
+  }
+
+  .name {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--color-accent);
+    text-shadow: var(--glow-md);
+    margin-bottom: var(--spacing-sm);
+    animation-delay: 0.2s;
+  }
+
+  .tagline {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--color-accent-alt);
+    margin-bottom: var(--spacing-lg);
+    animation-delay: 0.3s;
+  }
+
+  .hero-cta {
+    animation-delay: 0.4s;
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @media (max-width: 768px) {
+    .greeting {
+      font-size: 1rem;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+    }
+  }
+</style>

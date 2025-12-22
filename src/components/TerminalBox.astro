@@ -1,0 +1,59 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="terminal-box">
+  {title && (
+    <div class="terminal-header">
+      <span class="terminal-title">{title}</span>
+    </div>
+  )}
+  <div class="terminal-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .terminal-box {
+    background: var(--color-bg-secondary);
+    border: var(--border-retro);
+    border-radius: 4px;
+    padding: var(--spacing-md);
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+    position: relative;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .terminal-box::before {
+    content: '●  ●  ●';
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    color: var(--color-text-dim);
+    font-size: 0.6rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .terminal-header {
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-accent);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .terminal-title {
+    color: var(--color-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+
+  .terminal-content {
+    padding-top: var(--spacing-xs);
+  }
+</style>

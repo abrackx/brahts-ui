@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import TerminalBox from '../components/TerminalBox.astro';
+---
+
+<BaseLayout title="Hobbies | Alex Brackx">
+  <Section id="hobbies" title="hobbies.sh" subtitle="An average Denver citizen's activities">
+    <div class="hobbies-container">
+      <div class="hobbies-grid">
+        <TerminalBox title="Rock Climbing">
+          <p>Climbing rocks is silly. There's almost always an easier way to get up. Bouldering in particular is a lot of fun and a great way to get outside on the weekends.</p>
+          <p class="accent-alt">Current focus: Outdoor bouldering</p>
+        </TerminalBox>
+
+        <TerminalBox title="Skiing">
+          <p>As a former ice coast skier I can safely say: any day on the mountain is a good day. Skiing is my way of disconnecting from screens and reconnecting with nature and speed.</p>
+          <p class="accent-alt">Favorite resorts: Vail, Keystone, Breckenridge</p>
+        </TerminalBox>
+      </div>
+
+      <div class="page-nav">
+        <a href="/skills" class="btn">← skills</a>
+        <a href="/contact" class="btn">contact →</a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  .hobbies-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .hobbies-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+
+    .page-nav {
+      flex-direction: column;
+    }
+  }
+</style>
