@@ -1,5 +1,5 @@
 {
-  "name": "new-ui2",
+  "name": "brahts-ui",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "Personal website with retro-modern aesthetic",
+  "description": "Personal website",
   "dependencies": {
     "astro": "^5.16.6"
   }
